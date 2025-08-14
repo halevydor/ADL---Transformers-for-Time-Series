@@ -8,7 +8,7 @@ We evaluate models on two climatically distinct regions in Israel (Mediterranean
 
 ---
 
-## 🔧 Environment Setup
+## Environment Setup
 
 We recommend Python 3.10–3.11.
 
@@ -27,7 +27,7 @@ pip install -r requirements.txt
 
 ---
 
-## 📦 Model Implementations
+## Model Implementations
 
 The study used public implementations for each architecture. Because some repos are **not pip‑installable** as packages, we recommend adding them as git submodules (or cloning into a `models/` folder) and importing from source:
 
@@ -59,7 +59,7 @@ sys.path.append(os.path.join("models", "Informer2020"))
 
 ---
 
-## 📁 Suggested Repo Structure
+##  Suggested Repo Structure
 
 ```
 .
@@ -82,7 +82,7 @@ sys.path.append(os.path.join("models", "Informer2020"))
 
 ---
 
-## 🧪 Reproducing the Study (outline)
+## Reproducing the Study (outline)
 
 1. **Data preparation**  
    - Align meteorological + air‑quality data to hourly resolution (2020‑03‑09 → 2022‑12‑31).  
@@ -109,7 +109,7 @@ sys.path.append(os.path.join("models", "Informer2020"))
 
 ---
 
-## 📊 Key Findings (high‑level)
+## Key Findings (high‑level)
 
 - **PatchTST** often yields the lowest RRMSE, especially for **O₃** and **PM₂.₅**.  
 - **Crossformer** is typically second‑best in accuracy and **fastest to train**.  
@@ -118,42 +118,5 @@ sys.path.append(os.path.join("models", "Informer2020"))
 
 > See the notebook and figures in `results/` for full details.
 
----
 
-## ▶️ Running the Notebook
 
-```bash
-jupyter notebook
-# or
-jupyter lab
-```
-
-Open the notebook in `notebooks/`, update paths to your `data/` and `models/` folders if needed, and run the cells top‑to‑bottom.
-
----
-
-## 📝 Citations
-
-If you use this work, please cite the underlying paper/summary in this repo and the original model repositories.(See the References section inside the notebook/paper for full details.)
-
----
-
-## 📤 How to Publish to GitHub (Quick Steps)
-
-1. Create a new repo on GitHub (public or private).  
-2. In your project folder locally:
-   ```bash
-   git init
-   git add .
-   git commit -m "Initial commit: TST pollutant forecasting project"
-   git branch -M main
-   git remote add origin https://github.com/<YOUR_USERNAME>/<REPO_NAME>.git
-   git push -u origin main
-   ```
-3. Verify that the notebook renders on GitHub and that `README.md` appears on the repo homepage.
-
----
-
-## License
-
-Specify your preferred license (e.g., MIT) in a `LICENSE` file.
